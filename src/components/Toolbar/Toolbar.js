@@ -25,7 +25,7 @@ const Toolbar = (props) => (
           <li className="toolbar-item-icon">
             <a href="/#" className="notification">
               <MdNotificationsNone />
-              <span class="badge" />
+              <span className="badge" />
             </a>
           </li>
           <li className="toolbar-item-icon">
@@ -36,10 +36,10 @@ const Toolbar = (props) => (
           <li>
             <div className="dropdown-item">
               <MdMoreVert />
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <a href="/#" className="notification">
                   <MdNotificationsNone /> Notificatioon
-                  <span class="badge" />
+                  <span className="badge" />
                 </a>
                 <a href="/#">
                   <MdChatBubbleOutline /> Comments
@@ -62,7 +62,7 @@ const Toolbar = (props) => (
               <div className="toolbar-item-user-text">
                 <h4>Customer Name</h4>
               </div>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <a href="/#">Profile</a>
                 <a href="/#">Create Project</a>
                 <a href="/#">Link 3</a>
