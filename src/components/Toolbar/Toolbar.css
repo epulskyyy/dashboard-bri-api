@@ -1,0 +1,153 @@
+.toolbar {
+  height: 110px;
+  width: 82%;
+  float: right;
+  top: 0;
+  background-color: rgb(247, 249, 255);
+}
+
+.spacer {
+  flex: 1;
+}
+.toolbar-nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+  color: #7b96c4;
+}
+.toolbar-logo {
+  margin-left: 1rem;
+}
+.toolbar-logo h2 {
+  font-size: 24px;
+}
+.toolbar-nav-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.toolbar-nav-items li {
+  font-size: 20px;
+  padding: 0 1rem;
+}
+.dropdown-item {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.notification {
+  text-decoration: none;
+  padding: 10px 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+.notification .badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+.toolbar-item-line {
+  border-left: 1px solid rgb(232, 239, 246);
+  height: 110px;
+  left: 50%;
+  top: 0;
+}
+.toolbar-item-user {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.toolbar-item-user-img {
+  width: 52px;
+  height: 52px;
+  margin: auto;
+}
+.img-rounded {
+  border-radius: 50%;
+  height: 52px;
+}
+.toolbar-item-user-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100%;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #7b96c4;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.toolbar-item-user-text h4 {
+  display: flex;
+  height: 11px;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 679px) {
+  .toolbar-item-user:hover .dropdown-content {
+    display: block;
+    right: 0;
+  }
+  .toolbar-item-user-text,
+  .toolbar-item {
+    display: none;
+  }
+}
+@media (min-width: 950px) {
+  .toolbar-toggle-button {
+    display: none;
+  }
+  .toolbar-logo {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .toolbar {
+    width: 100%;
+  }
+}
+@media (min-width: 497px) {
+  .dropdown-item {
+    display: none;
+  }
+}
+@media (max-width: 497px) {
+  .toolbar-item-icon {
+    display: none;
+  }
+
+  .dropdown-item:hover .dropdown-content {
+    display: block;
+    right: 0;
+    top: 0;
+  }
+}

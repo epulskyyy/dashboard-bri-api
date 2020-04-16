@@ -1,0 +1,29 @@
+.btn {
+  border: none;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 175px;
+  height: 41px;
+  border-radius: 20.5px;
+  cursor: pointer;
+}
+.btn-green {
+  background-color: #3dcb35;
+  border-color: #3dcb35;
+  color: #fff;
+}
+
+.btn-green:focus,
+.btn-green:hover {
+  text-decoration: none;
+  background-color: #34a02f;
+  border-color: #34a02f;
+  width: 172px;
+  height: 37px;
+  outline: 0;
+}
