@@ -17,6 +17,17 @@
   width: 240px;
   max-width: 400px;
   z-index: 200;
+  animation-name: sideBarOpen;
+  animation-duration: 0.3s;
+  transition: 3s ease-in-out;
+}
+@keyframes sideBarOpen {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .side-bar-header {
@@ -78,18 +89,6 @@
   animation-name: side-bar-button;
   animation-duration: 1s;
   transition: 0.3s;
-}
-
-@keyframes side-bar-button {
-  0% {
-    transform: translateX(-100%);
-  }
-  30% {
-    transform: translateX(-80%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 button:focus {

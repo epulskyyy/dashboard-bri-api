@@ -5,9 +5,11 @@ import './App.css';
 import Content from './Layout/Container/Content';
 import ActionContext from './Context/ActionContext';
 import BackDrop from './components/Backdrop/Backdrop';
+import Login from './Layout/Container/Login';
 class App extends Component {
   state = {
     sideBarOpen: false,
+    isLogin: false,
   };
   ToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -21,18 +23,22 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <ActionContext.Provider
-          value={{
-            clickToggle: this.ToggleClickHandler,
-            clickBackDrop: this.backDropClickHandler,
-            show: this.state.sideBarOpen,
-          }}
-        >
-          <Toolbar />
-          <SideBar />
-          {this.state.sideBarOpen ? <BackDrop /> : null}
-          <Content />
-        </ActionContext.Provider>
+        {this.state.isLogin ? (
+          <ActionContext.Provider
+            value={{
+              clickToggle: this.ToggleClickHandler,
+              clickBackDrop: this.backDropClickHandler,
+              show: this.state.sideBarOpen,
+            }}
+          >
+            <Toolbar />
+            <SideBar />
+            {this.state.sideBarOpen ? <BackDrop /> : null}
+            <Content />
+          </ActionContext.Provider>
+        ) : (
+          <Login />
+        )}
       </div>
     );
   }
